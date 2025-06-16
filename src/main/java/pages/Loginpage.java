@@ -3,17 +3,19 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Homepage {
+public class Loginpage {
      WebDriver driver;
 
-     private By myAccount = By.xpath("(//span[contains(text(),'My account')])[2]");
+     private By continueButton = By.xpath("//a[contains(text(),'Continue')]");
 
-     public Homepage (WebDriver driver) {
+     public Loginpage(WebDriver driver) {
+
          this.driver = driver;
      }
 
-        public void clickMyAccount() {
-            driver.findElement(myAccount).click();
+        public void clickOnContinueButton() {
+
+         driver.findElement(continueButton).click();
         }
 
 
